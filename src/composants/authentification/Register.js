@@ -2,6 +2,8 @@ import React from 'react';
 import { Container, Form, Button } from 'react-bootstrap';
 import axios from 'axios';
 
+import '../../styles/Register.css';
+
 
 
 
@@ -22,8 +24,9 @@ const Register = () => {
     }
   }
   return (
-    <Container fluid='md'>
-      <h1>Inscription</h1>
+    <Container fluid='md' className='register-body'>
+      <div className='register-main'>
+      <h1 className='register'>Inscription</h1>
       <Form onSubmit={handleSubmit}>
         <Form.Group className="mb-5" controlId="formBasicName">
           <Form.Label>Nom</Form.Label>
@@ -50,6 +53,7 @@ const Register = () => {
         </Button>
 
       </Form>
+      </div>
     </Container>
   );
 };
