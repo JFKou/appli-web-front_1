@@ -28,27 +28,27 @@ const Register = () => {
       <div className='register-main'>
       <h1 className='register'>Inscription</h1>
       <Form onSubmit={handleSubmit}>
-        <Form.Group className="mb-5" controlId="formBasicName">
-          <Form.Label>Nom</Form.Label>
-          <Form.Control type="text" placeholder="Entrez votre nom" />
+        <Form.Group  controlId="formBasicName">
+          <Form.Label className="register-label">Nom</Form.Label>
+          <Form.Control className='register-input' type="text" placeholder="Entrez votre nom" />
         </Form.Group>
 
         <Form.Group controlId="formBasicEmail">
-          <Form.Label>Email</Form.Label>
-          <Form.Control type="email" placeholder="Entrez votre email" />
+          <Form.Label className="register-label">Email</Form.Label>
+          <Form.Control className="register-input" type="email" placeholder="Entrez votre email" />
         </Form.Group>
 
         <Form.Group controlId="formBasicPassword">
-          <Form.Label>Mot de passe</Form.Label>
-          <Form.Control type="password" placeholder="Entrez votre mot de passe" />
+          <Form.Label className="register-label">Mot de passe</Form.Label>
+          <Form.Control className="register-input" type="password" placeholder="Entrez votre mot de passe" />
         </Form.Group>
 
         <Form.Group controlId="formBasicPassword">
-          <Form.Label>Confirmez le mot de passe</Form.Label>
-          <Form.Control type="password" placeholder="Confirmez votre mot de passe" />
+          <Form.Label className="register-label">Confirmez le mot de passe</Form.Label>
+          <Form.Control className="register-input" type="password" placeholder="Confirmez votre mot de passe" />
         </Form.Group>
 
-        <Button variant="primary" type="submit">
+        <Button className='register-button custom-button' variant="danger" type="submit">
           S'inscrire
         </Button>
 

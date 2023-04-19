@@ -59,12 +59,12 @@ const Login = () => {
                   />
                 </Form.Group>
                 <div>
-                <Button variant='primary' type='submit' className='button-login'>
+                <Button  type='submit' className='button-login'>
                   Se connecter
                 </Button>
                 </div>
-                <h6>Vous n'avez pas de compte? </h6>
-                <Button as={Link} to='/register' type='submit' className='button-register'>Créez un compte</Button>
+                <h6 className='h6'>Vous n'avez pas de compte? </h6>
+                <Button as={Link} to='/register' type='submit' className='button-register custom-button'>Créez un compte</Button>
               </Form>
             </div>
           <div>

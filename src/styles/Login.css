@@ -14,13 +14,16 @@
     max-width: 400px; /* Ajouter une largeur maximale pour éviter que le formulaire ne devienne trop grand sur les écrans larges */
     height: 500px;
     overflow: hidden;
-    background: url('../images/1.jpg') no-repeat center/cover;
+    background: url('../images/9.jpg') no-repeat center/cover;
     border-radius: 40px;
     box-shadow: 5px 20px 50px #000;
 }
 
-h6{
-    display: none; /* Masquer le texte "Vous n'avez pas de compte?" pour le moment */
+.h6{
+   text-align: center;
+   color: #fff;
+   position: relative;
+   margin-top: 20px;
 }
 
 .connexion{
@@ -30,7 +33,6 @@ h6{
     text-align:center;
     font-size: 2.3em;
     font-weight: bold;
-    /* border: #007bff solid; */
     border-radius: 40px;   
     padding: 10px 20px; /* Ajouter du padding pour que le texte ne soit pas collé aux bords du bouton */
 }
@@ -45,15 +47,15 @@ h6{
 .login-label{
     color: #fff;
     font-size:1.3em;
-    justify-content: center;
+    margin-left: 12%;
     display: flex;
     font-weight: bold;
     cursor: pointer;
+    transition: 0.5 ease-in-out;
 }
 
 .login-input{
     position: relative;
-    text-align: center;
     width: 100%; /* Modifier la largeur de l'input en pourcentage pour qu'il soit responsive */
     max-width: 300px; /* Ajouter une largeur maximale pour éviter que l'input ne devienne trop large sur les écrans larges */
     height: 40px;
@@ -65,38 +67,36 @@ h6{
     border :none;
     outline: none;
     border-radius: 25px;
+    margin-top: -10px;
 }
 
 .button-register{
     position: relative;
-    bottom: 0%;
-    width: 100%;
-    margin:  auto;
-    margin-top: 30px;
+    width: 110%;
+    margin-top: 25px;
+    max-width: 400px;
+  
 
+   
 }
 
 .button-login{
-    justify-content: center;
-    width: 100%;
-    padding: 50%;
-    margin-top: 10px;
-    /* padding: 10px 20px; 
-    margin-top: 10px;
-    padding: 10px;
-    border :none;
-    outline: none;
     position: relative;
-    bottom: 0%;
-    width: 100%;
-    display: flex;
-    max-width: 300px;
-    text-align: center;
-    padding: 5px; */
+   
+    justify-content: center;
+    width: 50%;
+    margin-top: 15px;
+    margin-left: auto;
+    max-width: 400px;
+    
 }
 
-.button{
-    margin: 10px ;
+.custom-button{
+    color: grey;
+}
+
+/* .button{
+    /* margin: 10px ; */
     /* width: px; */
     /* 
     
@@ -110,6 +110,6 @@ h6{
     outline: none;
     border:none;
     border-radius: 50px;
-    cursor:pointer; */
+    cursor:pointer; 
 
-}
+} */
