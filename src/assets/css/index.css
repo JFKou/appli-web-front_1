@@ -1,5 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
+
+
+body {
+    font-family: "Roboto", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    letter-spacing: 0.7px;
+}
+
+
+
+
 :root {
     --main-bg: #ffffff;
     --second-bg: #fafafb;
@@ -47,12 +59,6 @@
     -webkit-tap-highlight-color: transparent;
 }
 
-body {
-    font-family: "Roboto", sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    letter-spacing: 0.7px;
-}
 
 a {
     text-decoration: none;
@@ -83,25 +89,25 @@ input:focus {
     border: 2px solid var(--main-color);
 }
 
-.page-header {
+.page-header{
     margin-bottom: 40px;
     text-transform: capitalize;
 }
 
-.card {
+ .card {
     padding: 30px;
     margin-bottom: 30px;
     background-color: var(--main-bg);
     box-shadow: var(--box-shadow);
     border-radius: var(--border-radius);
-}
+} 
 
-.full-height {
+.full-height{
     height: 100%;
 }
 
 .card.full-height {
-    height: calc(100% - 30px);
+    height: calc(100% - 30px); 
 }
 
 .card__header {
@@ -150,4 +156,4 @@ input:focus {
 .orange-color {
     background-color: var(--main-color-orange);
     color: #fff;
-}
+}  
