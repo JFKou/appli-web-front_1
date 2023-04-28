@@ -1,22 +1,36 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
+import ReactDOM from 'react-dom';
 import reportWebVitals from './reportWebVitals';
 import './assets/boxicons-2.0.7/css/boxicons.min.css'
 import './assets/css/grid.css'
 import './assets/css/theme.css'
 import './assets/css/index.css'
 
-import Layout from './components/layout/Layout';
+//import Layout from './components/layout/Layout';
 
- 
+ import { createStore } from 'redux';
+ import { Provider } from 'react-redux';
+ import rootReducer from "./redux/reducers"
+
+  import Home from './pages/Home';
+  
+
+ const store=createStore(
+  rootReducer
+ )
 
 document.title='appli-web-front'
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM;
 root.render(
-  <React.StrictMode>
-    <Layout/>
-  </React.StrictMode>
+  <Provider store={store}>
+    <React.StrictMode>
+       {/* <Layout /> */}
+
+      <Home/>
+    </React.StrictMode>
+  </Provider>
+  ,document.getElementById('root')
 );
 
 // If you want to start measuring performance in your app, pass a function

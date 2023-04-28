@@ -150,7 +150,7 @@ const renderOrderHead=(item, index)=>(
 )
 
 const renderOrderBody=(item,index)=>(
-  <tr>
+  <tr key={index}>
     <td>{item.id}</td>
     <td>{item.user}</td>
     <td>{item.price}</td>
