@@ -1,6 +1,10 @@
 import React, { useState } from 'react';
 import './navbar.css';
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faHome} from "@fortawesome/free-solid-svg-icons";
+import { faUser } from "@fortawesome/free-solid-svg-icons";
+
 const Navbar = () => {
   const [navbarOpen, setNavbarOpen] = useState(false);
 
@@ -11,7 +15,7 @@ const Navbar = () => {
   return (
     <header>
       <a href="/" className="logo">
-        <i className="ri-home-heart-fill"></i>
+      <FontAwesomeIcon icon={faHome} className='i'/>
         <span>Logo</span>
       </a>
       <ul className={`navbar ${navbarOpen ? 'open' : ''}`}>
@@ -35,7 +39,7 @@ const Navbar = () => {
       </ul>
       <div className="main">
         <a href="#" className="user">
-          <i className="ri-user-fill"></i> Se connecter
+          <FontAwesomeIcon icon={faUser} className='i'/> Se connecter
         </a>
         <a href="#">S'enregistrer</a>
         <div className={`bx ${navbarOpen ? 'bx-x' : 'bx-menu'}`} id="menu-icon" onClick={handleToggle}></div>
