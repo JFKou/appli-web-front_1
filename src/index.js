@@ -6,6 +6,9 @@ import './assets/css/grid.css'
 import './assets/css/theme.css'
 import './assets/css/index.css'
 
+// pour Admin Lte
+
+
 //import Layout from './components/layout/Layout';
 
  import { createStore } from 'redux';
