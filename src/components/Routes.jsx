@@ -1,31 +1,52 @@
 import React from 'react'
 
-import{Route, Router, Switch} from 'react-router-dom'
+import{Route,  Switch} from 'react-router-dom'
 
 import Customers from '../pages/Customers'
+
 import Drashboard from '../pages/Drashboard'
 
 import Home from '../pages/Home'
 
-// import SignUp from '../pages/SignUp'
-// import Login from '../pages/Login'
-// import About from '../pages/About'
+import Login from './login/Login'
+
+import About from '../pages/About'
+
+import SignUp from './signup/SignUp'
+
+import Error from '../pages/Error'
+
+import Layout from './layout/Layout'
 
 
 const Routes = () => {
   return (
     
-    <Switch>
-      <Route path='/' exact component={Drashboard}/>
-       <Route path='/customers' component={Customers}/>
-         <Route path='/home' component={Home}/> 
+      <Switch>
+      
        
-          {/* <Route path='/signup' component={SignUp}/>
-            <Route path='/login' component={Login}/>
-              <Route path='/about' component={About}/>
-     */}
+          
+        <Route path='/' exact component={Home}/> 
 
-    </Switch>
+        <Route path='/signup' exact component={SignUp}/>
+        <Route path='/login' exact component={Login}/>
+        <Route path='/about' exact component={About}/>
+        <Route path='*' exact component={Error}/>
+        
+        
+        <Route path='/admin' exact>
+          <Layout>
+            <Switch>
+              <Route path='/dashboard' exact component={Drashboard}/>
+              <Route path='/customers' exact component={Customers}/>
+            </Switch>
+          </Layout>
+        </Route>
+
+      
+
+      </Switch>
+    
     
   )
 }

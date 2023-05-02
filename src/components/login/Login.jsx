@@ -1,15 +1,17 @@
 import React from "react";
 
+import '../auth/authform.css'
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { faLock } from "@fortawesome/free-solid-svg-icons";
 
 
 
+
 function Login(props) {
   return (
-    <div className="body">
-        <div className="container">
+            
             <div className="form signin">
             <h2>Se connecter</h2>
             <div className="inputBox">
@@ -27,14 +29,15 @@ function Login(props) {
             </div>
             <p>
                 Vous n'avez pas de compte?{" "}
-                <a href="#" className="create" onClick={props.switchToSignUp}>
+                 <a href="#" className="a create" onClick={props.switchToSignUp}>
                 {" "}
                 Creer un compte
-                </a>
+                </a>  
+                {/* <Link to="/signup" className="a create" >Creer un compte</Link> */}
             </p>
             </div>
-        </div>
-    </div>
+             
+      
   );
 }
 

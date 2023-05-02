@@ -1,7 +1,7 @@
 [
   {
     "display_name": "Tableau de bord",
-    "route": "/",
+    "route": "/dashboard",
     "icon": "bx bx-category-alt"
   },
   {

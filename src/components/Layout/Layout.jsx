@@ -40,7 +40,7 @@ const Layout = () => {
           <div className="layout__content">
             <TopNav/>  
             <div className="layout__content-main">
-              <Routes/>
+                <Routes/>
             </div>
           </div>
         </div>

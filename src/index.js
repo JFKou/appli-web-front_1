@@ -11,8 +11,9 @@ import './assets/css/index.css'
  import { createStore } from 'redux';
  import { Provider } from 'react-redux';
  import rootReducer from "./redux/reducers"
+import App from './App';
 
-  import Home from './pages/Home';
+  // import Home from './pages/Home';
   
 
  const store=createStore(
@@ -27,7 +28,9 @@ root.render(
     <React.StrictMode>
        {/* <Layout /> */}
 
-      <Home/>
+        <App/>
+
+      {/* <Home/> */}
     </React.StrictMode>
   </Provider>
   ,document.getElementById('root')
