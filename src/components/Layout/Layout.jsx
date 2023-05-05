@@ -11,7 +11,23 @@ import { useSelector,useDispatch } from 'react-redux'
 
 import themeAction from '../../redux/actions/ThemeAction'
 
-import Routes from '../Routes'
+//ceux que j'ai déplacé de index.js
+
+import '../../assets/css/index.css'
+import '../../assets/css/theme.css'
+import '../../assets/css/grid.css'
+import '../../assets/boxicons-2.0.7/css/boxicons.min.css'
+
+
+
+
+
+
+
+// import Routes from '../Routes'
+import Customers from '../../pages/Customers'
+import Drashboard from '../../pages/Drashboard'
+
 
 const Layout = () => {
 
@@ -40,7 +56,9 @@ const Layout = () => {
           <div className="layout__content">
             <TopNav/>  
             <div className="layout__content-main">
-                <Routes/>
+                {/* <Routes/> */}
+                <Route path='/dashboard' exact component={Drashboard}/>
+              <Route path='/customers' exact component={Customers}/>
             </div>
           </div>
         </div>

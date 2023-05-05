@@ -18,7 +18,7 @@ import Error from '../pages/Error'
 
 import Layout from './layout/Layout'
 
-import ClientDashboard from '../pages/ClientDashboard'
+import ClientDashboard from '../pages/client/ClientDashboard'
 
 
 const Routes = () => {
@@ -32,15 +32,12 @@ const Routes = () => {
         <Route path='/about' exact component={About}/>
      
         <Route path='/client' exact component={ClientDashboard}/>
-        <Route path='/admin' exact>
-          <Layout>
-            <Switch>
-              <Route path='/dashboard' exact component={Drashboard}/>
-              <Route path='/customers' exact component={Customers}/>
-            </Switch>
-          </Layout>
+        <Route path='/admin'>
+
+          <Layout/>
+          
         </Route>
-        <Route path='*' exact component={Error}/>
+        {/* <Route path='*' exact component={Error}/> */}
 
       
 

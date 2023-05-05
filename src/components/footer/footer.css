@@ -1,22 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Sora&display=swap');
 
-
+/* 
 *{
     margin :0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Sora', sans-serif;
-}
-body{
-    display: flex;
-    justify-content: flex-end;
+} */
+
+ /*body{
+    display: flex; */
+    /* justify-content: flex-end;
     align-items: center;
     min-height: 100vh;
     flex-direction: column;
-    background: #ede7f6;
-}
+    background: #ede7f6; 
+}*/
 
-footer{
+.footer{
     position: relative;
     width: 100%;
     height: auto;
@@ -27,7 +28,7 @@ footer{
     flex-wrap: wrap;
 }
 
-footer .container
+.footer .container
 {
     display: flex;
     justify-content:space-between;
@@ -35,15 +36,15 @@ footer .container
     flex-direction: row;
 }
 
-footer .container .sec{
+.footer .container .sec{
 margin-right: 30px;
 }
-footer .container .sec.aboutus{
+.footer .container .sec.aboutus{
    width: 40%;
 
 }
 
-footer .container  h2{
+.footer .container  h2{
     position: relative;
     color: #fff;
     font-weight:500 ;
@@ -51,7 +52,7 @@ footer .container  h2{
 
 }
 
-footer .container h2:before
+.footer .container h2:before
 {
     content: '';
     position: absolute;
@@ -62,7 +63,7 @@ footer .container h2:before
     background: #f00;
 }
 
-footer p{
+.footer p{
     color:#999;
 }
 
@@ -165,13 +166,13 @@ footer p{
 }
 
 @media screen and (max-width: 991px) {
-    footer{
+    .footer{
         padding:40px;
     }
-    footer .container{
+    .footer .container{
         flex-direction: column;
     }
-    footer .container .sec.aboutus,
+    .footer .container .sec.aboutus,
     .quickLinks,
     .contacts
     {

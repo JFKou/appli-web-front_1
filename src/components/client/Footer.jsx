@@ -1,19 +1,33 @@
-import React from 'react'
 
-const Footer = () => {
+function Footer() {
   return (
-    <div>
-       <footer className="main-footer">
-            <strong>Copyright © 2014-2021 
-                <a href="https://adminlte.io">AdminLTE.io</a>.
-            </strong>
-            All rights reserved.
-            <div className="float-right d-none d-sm-inline-block">
-                <b>Version</b> 3.2.0
-            </div>
-        </footer>
-
-    </div>
+    <footer className="footer">
+				<div className="container-fluid">
+					<div className="row text-muted">
+						<div className="col-6 text-start">
+							<p className="mb-0">
+								<a className="text-muted" href="https://adminkit.io/" target="_blank"><strong>AdminKit</strong></a> - <a className="text-muted" href="https://adminkit.io/" target="_blank"><strong>Bootstrap Admin Template</strong></a>								&copy;
+							</p>
+						</div>
+						<div className="col-6 text-end">
+							<ul className="list-inline">
+								<li className="list-inline-item">
+									<a className="text-muted" href="https://adminkit.io/" target="_blank">Support</a>
+								</li>
+								<li className="list-inline-item">
+									<a className="text-muted" href="https://adminkit.io/" target="_blank">Help Center</a>
+								</li>
+								<li className="list-inline-item">
+									<a className="text-muted" href="https://adminkit.io/" target="_blank">Privacy</a>
+								</li>
+								<li className="list-inline-item">
+									<a className="text-muted" href="https://adminkit.io/" target="_blank">Terms</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</footer>
   )
 }
 

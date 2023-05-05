@@ -16,7 +16,7 @@ const Navbar = () => {
 
   return (
 
-    <header>
+    <div className='header'>
       {/* <a href="/" className="logo">
       <FontAwesomeIcon icon={faHome} className='i'/>
         <span>Logo</span>
@@ -51,7 +51,7 @@ const Navbar = () => {
         </li>
         
       </ul>
-      <div className="main">
+      <div className="main-nav">
         {/* <a href="#" className="user">
           <FontAwesomeIcon icon={faUser} className='i'/> Se connecter
         </a> */}
@@ -63,7 +63,7 @@ const Navbar = () => {
 
         <div className={`bx ${navbarOpen ? 'bx-x' : 'bx-menu'}`} id="menu-icon" onClick={handleToggle}></div>
       </div>
-    </header>
+    </div>
    
   );
 };

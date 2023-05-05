@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import { useHistory } from "react-router-dom";
 
-import '../auth/authform.css'
+// import '../auth/authform.css'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
@@ -16,9 +16,13 @@ function Login(props) {
 
   const handleLogin = (e) => {
     e.preventDefault();
-
-    axios.post("/api/login", { email, password })
+axios.get('/sanctum/csrf-cookie').then(response => {
+  axios.post("http://127.0.0.1:8000/api/login", { email, password }, {
+    headers: {
+    }
+    })
       .then(response => {
+        
         // On récupère le token d'authentification dans la réponse
         const token = response.data.token;
 
@@ -28,19 +32,26 @@ function Login(props) {
         // On redirige l'utilisateur en fonction de son rôle
         if (response.data.user.role === "admin") {
           history.push("/admin");
-        } else {
-          history.push("/dashboard");
+        } 
+        else if(response.data.user.role === "user"){
+          history.push("/client");
+        }
+        else {
+          history.push("/error");
         }
       })
       .catch(error => {
         console.error(error);
       });
+});
+    
   }
 
   return (
     <div className="form signin">
       <h2>Se connecter</h2>
-      <form onSubmit={handleLogin}>
+      <form onSubmit={handleLogin} >
+      
         <div className="inputBox">
           <input type="email" id="email-input" required value={email} onChange={(e) => setEmail(e.target.value)} />
           <FontAwesomeIcon icon={faEnvelope} className="i" />        
@@ -57,7 +68,7 @@ function Login(props) {
       </form>
       <p>
         Vous n'avez pas de compte?{" "}
-         <a href="#" className="a create" onClick={props.switchToSignUp}>
+         <a href="https" className="a create" onClick={props.switchToSignUp}>
         {" "}
         Creer un compte
         </a>  

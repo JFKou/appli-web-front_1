@@ -7,7 +7,7 @@ import './footer.css'
 const Footer = () => {
 
     return (
-        <footer>
+        <div className='footer'>
         <div className="container">
         <div className="sec aboutus">
         <h2>A Propos</h2>
@@ -56,7 +56,7 @@ const Footer = () => {
         <div className="copyrightText">
         <p>Copyright@2023 Esatic,Treichville. Tous droits reservés.</p>
         </div>
-        </footer>
+        </div>
         );
   
 }

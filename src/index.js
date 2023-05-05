@@ -1,23 +1,30 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import reportWebVitals from './reportWebVitals';
-import './assets/boxicons-2.0.7/css/boxicons.min.css'
-import './assets/css/grid.css'
-import './assets/css/theme.css'
-import './assets/css/index.css'
+
+
+// import './assets/boxicons-2.0.7/css/boxicons.min.css'
+
+
+// import './assets/css/grid.css'
+
+// import './assets/css/theme.css'
+//  import './assets/css/index.css'
 
 // pour Admin Lte
 
 
-//import Layout from './components/layout/Layout';
+
 
  import { createStore } from 'redux';
  import { Provider } from 'react-redux';
  import rootReducer from "./redux/reducers"
 import App from './App';
 
-  // import Home from './pages/Home';
+
+
   
+
 
  const store=createStore(
   rootReducer
@@ -26,14 +33,17 @@ import App from './App';
 document.title='appli-web-front'
 
 const root = ReactDOM;
+
+// const root = createRoot(document.getElementById('root'));
+
+
 root.render(
   <Provider store={store}>
     <React.StrictMode>
-       {/* <Layout /> */}
+      
 
         <App/>
 
-      {/* <Home/> */}
     </React.StrictMode>
   </Provider>
   ,document.getElementById('root')
