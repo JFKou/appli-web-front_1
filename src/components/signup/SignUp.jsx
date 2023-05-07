@@ -95,20 +95,7 @@ function SignUp(props) {
           <label htmlFor="password-input">Mot de passe</label>
           <span>{registerInput.error_list.password}</span>
         </div>
-        {/* <div className="inputBox">
-          <input
-            type="password"
-            id="confirm-password-input"
-            name="password_confirmation"
-            value={formData.password_confirmation}
-            onChange={handleChange}
-            required
-          />
-          <FontAwesomeIcon icon={faLock} className="i" />
-          <label htmlFor="confirm-password-input">
-            Confirmer le mot de passe
-          </label>
-        </div> */}
+       
         <div className="inputBox">
           <input type="submit" value="S'inscrire" />
         </div>

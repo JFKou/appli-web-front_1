@@ -2,7 +2,7 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
- import './interventions.css'
+//  import './interventions.css'
 import Loading from "../components/loading/Loading";
 
 function Interventions(){
@@ -19,7 +19,7 @@ function Interventions(){
             setInterventions(res.data.interventions);
              setLoading(false);
           });
-      }, [setLoading]); // <== ici, le tableau de dépendances est vide, donc l'effet ne s'exécute qu'une seule fois
+      }, []); // <== ici, le tableau de dépendances est vide, donc l'effet ne s'exécute qu'une seule fois
       
       if (loading){
             return (
