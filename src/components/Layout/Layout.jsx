@@ -28,6 +28,8 @@ import '../../assets/boxicons-2.0.7/css/boxicons.min.css'
 import Customers from '../../pages/Customers'
 import Drashboard from '../../pages/Drashboard'
 
+import Interventions from '../../pages/Interventions'
+
 
 const Layout = () => {
 
@@ -58,7 +60,8 @@ const Layout = () => {
             <div className="layout__content-main">
                 {/* <Routes/> */}
                 <Route path='/dashboard' exact component={Drashboard}/>
-              <Route path='/customers' exact component={Customers}/>
+                <Route path='/customers' exact component={Customers}/>
+                <Route path='/orders' exact component={Interventions}/>
             </div>
           </div>
         </div>
