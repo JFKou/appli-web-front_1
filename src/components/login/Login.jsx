@@ -1,6 +1,10 @@
 import React, { useState } from "react";
 import axios from "axios";
+
 import { useHistory } from "react-router-dom";
+
+import './login.css'
+
 
 import swal from 'sweetalert';
 
@@ -20,7 +24,8 @@ function Login(props) {
     password:'',
     error_list: [],
     });
-  const handleInput=(e)=>{
+
+  const handleInput = (e)=>{
     e.persist();
     setLogin({...loginInput, [e.target.name]: e.target.value});
   }
@@ -38,36 +43,37 @@ function Login(props) {
       axios.post(`api/login`, data).then(res => {
       if(res.data.status === 200)
       {
-      localStorage.setItem('auth_token', res.data.token);
-      localStorage.setItem('auth_name', res.data.username);
-      swal("Success", res.data.message,"success");
-      if(res.data.role === 'admin')
-      {
-      history.push('/admin');
-      }
-      else if(res.data.role === 'user')
-      {
-      history.push('/client');
-      }
+        localStorage.setItem('auth_token', res.data.token);
+        localStorage.setItem('auth_name', res.data.username);
+        swal("Success", res.data.message,"success");
+        if(res.data.role === 'admin')
+        {
+          console.log(history.push('/admin'));
 
-      else 
-      {
-      history.push('/error');
-      }
+        }
+        else if(res.data.role === 'user')
+        
+        {
+          history.push('/client');
+        }
+
+        else 
+        {
+          history.push('/error');
+        }
 
       }
       else if(res.data.status === 401)
       {
-      swal("Warning", res.data.message,"warning");
+        swal("Warning", res.data.message,"warning");
       }
       else
       {
-      setLogin({...loginInput, error_list: res.data.validation_errors });
+        setLogin({...loginInput, error_list: res.data.validation_errors });
       }
-      });
-      });
-      
-      }
+    });
+  });     
+}
      
 
 
@@ -95,10 +101,10 @@ function Login(props) {
       </form>
       <p>
         Vous n'avez pas de compte?{" "}
-         <a href="https" className="a create" onClick={props.switchToSignUp}>
+         <button className="a create" onClick={props.switchToSignUp}>
         {" "}
         Creer un compte
-        </a>  
+        </button>  
         {/* <Link to="/signup" className="a create" >Creer un compte</Link> */}
       </p>
     </div>

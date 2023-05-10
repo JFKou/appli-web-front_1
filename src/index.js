@@ -5,14 +5,10 @@ import reportWebVitals from './reportWebVitals';
 
 // import './assets/boxicons-2.0.7/css/boxicons.min.css'
 
-
 // import './assets/css/grid.css'
 
 // import './assets/css/theme.css'
 //  import './assets/css/index.css'
-
-// pour Admin Lte
-
 
 
 
@@ -33,8 +29,6 @@ import App from './App';
 document.title='appli-web-front'
 
 const root = ReactDOM;
-
-// const root = createRoot(document.getElementById('root'));
 
 
 root.render(

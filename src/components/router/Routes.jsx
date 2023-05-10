@@ -1,24 +1,22 @@
 import React from 'react'
 
-import{Route,Redirect,  Switch} from 'react-router-dom'
+import{Route,  Switch} from 'react-router-dom'
+
+import Login from '../login/Login';
+import SignUp from '../signup/SignUp';
+import About from '../../pages/About';
+import Home from '../../pages/Home';
+import ClientDashboard from '../../pages/client/ClientDashboard';
+import Layout from '../layout/Layout';
 
 
-
-import Home from '../pages/Home'
-
-import Login from './login/Login'
-
-import About from '../pages/About'
-
-import SignUp from './signup/SignUp'
 
 // import Error from '../pages/Error'
 
-import Layout from './layout/Layout'
 
-import ClientDashboard from '../pages/client/ClientDashboard'
 
 import axios from 'axios';
+import CreateInterventions from '../../pages/interventions/CreateInterventions';
 
 
  axios.defaults.baseURL = "http://localhost:8000";
@@ -41,23 +39,27 @@ const Routes = () => {
         <Route path='/' exact component={Home}/> 
 
 
-        <Route path="/login">
-              {localStorage.getItem('auth_token') ? <Redirect to='/' /> : <Login />}
+        <Route path="/login" exact component={Login}>
+              {/* {localStorage.getItem('auth_token') ? <Redirect to='/' /> : <Login />} */}
         </Route>
 
         <Route path='/about' exact component={About}/>
      
         <Route path='/client' exact component={ClientDashboard}/>
 
-        <Route path='/signup'>
-        {localStorage.getItem('auth_token') ? <Redirect to='/' /> : <SignUp />}
+        <Route path='/signup' exact component={SignUp}>
+        {/* {localStorage.getItem('auth_token') ? <Redirect to='/' /> : <SignUp />} */}
         </Route>
 
-        <Route path='/admin'>
+        <Route path='/admin' exact>
           <Layout/> 
         </Route>
 
-        {/* <Route path='*' exact component={Error}/> */}
+
+        <Route path='/about' exact component={About}/>
+
+
+         <Route path='*' exact component={Error}/> 
 
       
 

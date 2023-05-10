@@ -3,6 +3,8 @@ import axios from "axios";
 import { useHistory } from "react-router-dom";
 import swal from 'sweetalert'
 
+import './signup.css'
+
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
@@ -67,6 +69,8 @@ function SignUp(props) {
           <FontAwesomeIcon icon={faEnvelope} className="i" />
           <label htmlFor="text-input">Nom</label>
           <span>{registerInput.error_list.name}</span>
+          {/* <span>{registerInput.error_list && registerInput.error_list.name}</span> */}
+
         </div>
         <div className="inputBox">
           <input
@@ -95,17 +99,16 @@ function SignUp(props) {
           <label htmlFor="password-input">Mot de passe</label>
           <span>{registerInput.error_list.password}</span>
         </div>
-       
         <div className="inputBox">
           <input type="submit" value="S'inscrire" />
         </div>
       </form>
       <p>
         Vous avez déjà un compte?{" "}
-        <a href="#" className="create" onClick={props.switchToLogin}>
+        <button className="create" onClick={props.switchToLogin}>
           {" "}
           Se connecter
-        </a>
+        </button>
       </p>
     </div>
   );

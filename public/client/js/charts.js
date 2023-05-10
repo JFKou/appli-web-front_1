@@ -1,7 +1,4 @@
-// import Chart from 'chart.js';
-// import { jsVectorMap } from 'jvectormap-next';
-
-		document.addEventListener("DOMContentLoaded", function() {
+	document.addEventListener("DOMContentLoaded", function() {
 			var ctx = document.getElementById("chartjs-dashboard-line").getContext("2d");
 			var gradient = ctx.createLinearGradient(0, 0, 0, 225);
 			gradient.addColorStop(0, "rgba(215, 227, 244, 1)");

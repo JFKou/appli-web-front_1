@@ -118,7 +118,7 @@ const ThemeMenu = () => {
             </button>
             <div className="theme-menu__select">
                 <span>Choisir le mode</span>
-                <ul claasName='mode-list'>
+                <ul className='mode-list'>
                     {
                         mode_settings.map((item, index)=>(
                             <li key={index} onClick={()=>setMode(item)}>
@@ -134,7 +134,7 @@ const ThemeMenu = () => {
             </div>
             <div className="theme-menu__select">
                 <span>Choisir la couleur</span>
-                <ul claasName='mode-list'>
+                <ul className='mode-list'>
                     {
                         color_settings.map((item, index)=>(
                             <li key={index} onClick={()=>{setColor(item)}}>

@@ -18,17 +18,11 @@ import '../../assets/css/theme.css'
 import '../../assets/css/grid.css'
 import '../../assets/boxicons-2.0.7/css/boxicons.min.css'
 
-
-
-
-
-
-
-// import Routes from '../Routes'
-import Customers from '../../pages/Customers'
 import Drashboard from '../../pages/Drashboard'
-
-import Interventions from '../../pages/Interventions'
+import Customers from '../../pages/Customers'
+import Interventions from '../../pages/interventions/Interventions'
+import CreateInterventions from '../../pages/interventions/CreateInterventions'
+import EditInterventions from '../../pages/interventions/EditInterventions'
 
 
 const Layout = () => {
@@ -58,10 +52,11 @@ const Layout = () => {
           <div className="layout__content">
             <TopNav/>  
             <div className="layout__content-main">
-                {/* <Routes/> */}
-                <Route path='/dashboard' exact component={Drashboard}/>
-                <Route path='/customers' exact component={Customers}/>
-                <Route path='/orders' exact component={Interventions}/>
+            <Route path='/dashboard' exact component={Drashboard}/>
+            <Route path='/customers' exact component={Customers}/>
+            <Route path='/interventions' exact component={Interventions}/> 
+            <Route path='/interventions/add' exact component={CreateInterventions}/>
+            <Route path='/interventions/:id/edit' exact component={EditInterventions}/>
             </div>
           </div>
         </div>

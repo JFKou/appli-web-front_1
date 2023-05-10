@@ -16,7 +16,7 @@
   },
   {
     "display_name": "Interventions",
-    "route": "/orders",
+    "route": "/interventions",
     "icon": "bx bx-calendar"
   },
   {
