@@ -1,26 +1,54 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,600;1,300&display=swap');
+/* *{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+} */
 
+/* .i {
+    padding: 10px;
+} */
 
+.body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #222327;
+}
 
- .form{
+.body .container{
+    margin-top: 40px;
+    padding: 40px;
+    border-radius: 20px;
+    border: 8px solid #223243;
+    box-shadow: -5px -5px 15px rgba(255, 255, 255, 0.1),
+    5px 5px 15px rgba(0, 0, 0, 0.35),
+    inset -5px -5px 15px rgba(255, 255, 255, 0.1),
+    inset 5px 5px 15px rgba(0, 0, 0, 0.35); 
+    width: auto;
+}
+
+.body .container .form{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
 
-.form h2{
+.body .container .form h2{
     color: #fff;
     font-weight: 500;
     letter-spacing: 0.1em;
 }
 
-.form .inputBox{
+.body .container .form .inputBox{
     position: relative;
     width: 300px;
 }
 
-.form .inputBox input{
+.body .container .form .inputBox input{
     padding: 12px 10px 12px 48px;
     margin-bottom: 10px;
     border: none;
@@ -39,7 +67,7 @@
     
 }
 
-.form .inputBox label{
+.body .container .form .inputBox label{
 
     position: absolute;
     left:0;
@@ -52,8 +80,8 @@
     color: rgba(255, 255, 255, 0.5);   
 }
 
-.form .inputBox input:valid ~ label,
-.form .inputBox input:focus ~ label
+.body .container .form .inputBox input:valid ~ label,
+.body .container .form .inputBox input:focus ~ label
 {
     color: blue;
     border: 1px solid blue;
@@ -65,12 +93,12 @@
     letter-spacing: 0.1em;
 }
 
-.form .inputBox input:valid,
-.form .inputBox input:focus
+.body .container .form .inputBox input:valid,
+.body .container .form .inputBox input:focus
 {
     border: 1px solid blue;
 }
-.form .inputBox .i{
+.body .container .form .inputBox .i{
     position: absolute;
     top:15px;
     left: 16px;
@@ -82,7 +110,7 @@
 
 }
 
-.form .inputBox input[type='submit']
+.body .container .form .inputBox input[type='submit']
 {
     background: blue;
     color:#223243;
@@ -94,18 +122,33 @@
     inset 5px 5px 15px rgba(0, 0, 0, 0.35); 
 }
 
-.form p a{
+.body .container .form p a{
     font-weight: 500;
     color: #fff;
 }
 
-.form p{
+.body .container .form p{
     color: rgba(255, 255, 255, 0.5);
     font-size: 0.75em;
     font-weight: 300;
 }
 
-.signinForm .form.signin{
+.body .signinForm .form.signin{
     display:flex;
 }
 
+/*
+
+
+
+
+
+
+
+
+
+
+
+
+
+ */

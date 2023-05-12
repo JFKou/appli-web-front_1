@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
-import { useHistory } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import swal from 'sweetalert'
 
 import './signup.css'
@@ -10,7 +10,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { faLock } from "@fortawesome/free-solid-svg-icons";
 
-function SignUp(props) {
+function SignUp() {
 
   const Navigate = useHistory();
 
@@ -54,6 +54,8 @@ function SignUp(props) {
     
 
   return (
+    <div className="body">
+    <div className="container">
     <div className="form signup">
       <h2>Créer un compte</h2>
       <form onSubmit={registerSubmit}>
@@ -105,11 +107,13 @@ function SignUp(props) {
       </form>
       <p>
         Vous avez déjà un compte?{" "}
-        <button className="create" onClick={props.switchToLogin}>
+        <Link to='/login' className="create">
           {" "}
           Se connecter
-        </button>
+        </Link>
       </p>
+    </div>
+    </div>
     </div>
   );
 }

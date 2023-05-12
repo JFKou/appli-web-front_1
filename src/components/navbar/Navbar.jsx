@@ -21,7 +21,7 @@ const Navbar = () => {
       <FontAwesomeIcon icon={faHome} className='i'/>
         <span>Logo</span>
       </a> */}
-      <Link to='/' className='logo a'> 
+      <Link to='/dashboard' className='logo a'> 
       <FontAwesomeIcon icon={faHome} className='i'/>
       <span>Logo</span>
       </Link>

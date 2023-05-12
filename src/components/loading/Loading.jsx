@@ -1,12 +1,15 @@
 import React from 'react'
+import './loading.css'
 
 function Loading () {
 
   return (
-    <div className = "container mt-3">
-        <div className="spinner-border text-primary" role='status'>
-            <span className="visually-hidden">Loading ...</span>
-        </div> <span> Loading... Veuillez patienter</span>
+    <div className="body-1">
+      <div className = "container">
+        
+          <div className="loader" role='status'><span> </span></div> 
+      </div>
+      <h3>Loading... Veuillez patienter</h3>
     </div>
   )
 }

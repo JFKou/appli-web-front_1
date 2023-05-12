@@ -1,22 +1,21 @@
 import React from 'react'
 
-import{Route,  Switch} from 'react-router-dom'
+import{BrowserRouter, Route,  Switch} from 'react-router-dom'
 
 import Login from '../login/Login';
 import SignUp from '../signup/SignUp';
 import About from '../../pages/About';
-import Home from '../../pages/Home';
 import ClientDashboard from '../../pages/client/ClientDashboard';
 import Layout from '../layout/Layout';
 
 
 
-// import Error from '../pages/Error'
+ import Error from '../../pages/Error'
 
 
 
 import axios from 'axios';
-import CreateInterventions from '../../pages/interventions/CreateInterventions';
+import Home from '../../pages/home/Home';
 
 
  axios.defaults.baseURL = "http://localhost:8000";
@@ -33,7 +32,7 @@ import CreateInterventions from '../../pages/interventions/CreateInterventions';
 
 const Routes = () => {
   return (
-    
+    <BrowserRouter>
       <Switch>
       
         <Route path='/' exact component={Home}/> 
@@ -61,10 +60,8 @@ const Routes = () => {
 
          <Route path='*' exact component={Error}/> 
 
-      
-
       </Switch>
-    
+    </BrowserRouter>
     
   )
 }

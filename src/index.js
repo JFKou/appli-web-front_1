@@ -9,18 +9,10 @@ import reportWebVitals from './reportWebVitals';
 
 // import './assets/css/theme.css'
 //  import './assets/css/index.css'
-
-
-
  import { createStore } from 'redux';
  import { Provider } from 'react-redux';
  import rootReducer from "./redux/reducers"
 import App from './App';
-
-
-
-  
-
 
  const store=createStore(
   rootReducer

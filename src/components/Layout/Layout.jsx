@@ -56,7 +56,7 @@ const Layout = () => {
             <Route path='/customers' exact component={Customers}/>
             <Route path='/interventions' exact component={Interventions}/> 
             <Route path='/interventions/add' exact component={CreateInterventions}/>
-            <Route path='/interventions/:id/edit' exact component={EditInterventions}/>
+            <Route path='/interventions/:id' exact component={EditInterventions}/>
             </div>
           </div>
         </div>

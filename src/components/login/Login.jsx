@@ -1,84 +1,65 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import axios from "axios";
-
-import { useHistory } from "react-router-dom";
-
+import { Link, useHistory } from "react-router-dom";
 import './login.css'
-
-
 import swal from 'sweetalert';
-
-// import '../auth/authform.css'
-
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { faLock } from "@fortawesome/free-solid-svg-icons";
 
-
-function Login(props) {
-
+function Login() {
   const history = useHistory();
-
   const [loginInput, setLogin] = useState({
     email:'',
     password:'',
     error_list: [],
-    });
+  });
 
   const handleInput = (e)=>{
     e.persist();
     setLogin({...loginInput, [e.target.name]: e.target.value});
   }
 
+  useEffect(() => {
+    axios.get('/sanctum/csrf-cookie').then(response => {
+      console.log(response.data);
+    });
+  }, []);
 
   const loginSubmit = (e) => {
     e.preventDefault();
-
+  
     const data ={
       email: loginInput.email,
       password: loginInput.password,
     }
 
-    axios.get('/sanctum/csrf-cookie').then(response => {
-      axios.post(`api/login`, data).then(res => {
-      if(res.data.status === 200)
-      {
+    axios.post(`api/login`, data).then(res => {
+      if (res.data.status === 200) {
         localStorage.setItem('auth_token', res.data.token);
         localStorage.setItem('auth_name', res.data.username);
+        localStorage.setItem('auth_role', res.data.role);
+
         swal("Success", res.data.message,"success");
-        if(res.data.role === 'admin')
-        {
-          console.log(history.push('/admin'));
 
-        }
-        else if(res.data.role === 'user')
-        
-        {
+        if (res.data.role === 'admin') {
+          history.push('/admin');
+        } else if (res.data.role === 'user') {
           history.push('/client');
-        }
-
-        else 
-        {
+        } else {
           history.push('/error');
         }
-
-      }
-      else if(res.data.status === 401)
-      {
+      } else if (res.data.status === 401) {
         swal("Warning", res.data.message,"warning");
-      }
-      else
-      {
+      } else {
         setLogin({...loginInput, error_list: res.data.validation_errors });
       }
     });
-  });     
-}
-     
-
-
+  }
 
   return (
+    <div className="body">
+      <div className="container">
     <div className="form signin">
       <h2>Se connecter</h2>
       <form onSubmit={loginSubmit} >
@@ -96,17 +77,19 @@ function Login(props) {
           <span>{loginInput.error_list.password}</span>
         </div>
         <div className="inputBox">
-          <input type="submit" value="se connecter" />
+          <input type="submit" value="se connecter"/>
         </div>
       </form>
       <p>
         Vous n'avez pas de compte?{" "}
-         <button className="a create" onClick={props.switchToSignUp}>
+         <Link to='/signup' className="a create" >
         {" "}
         Creer un compte
-        </button>  
+        </Link>  
         {/* <Link to="/signup" className="a create" >Creer un compte</Link> */}
       </p>
+    </div>
+    </div>
     </div>
   );
 }

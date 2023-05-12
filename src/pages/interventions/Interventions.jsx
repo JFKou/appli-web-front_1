@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css'
 
 
-import './interventions.css'
+// import './interventions.css'
 import Loading from "../../components/loading/Loading"
 
 
@@ -75,7 +75,7 @@ const Interventions=()=>{
               <td>{item.extincteur_id}</td>
               <td>{item.technicien_id}</td>
               <td>
-                <Link to={`/interventions/${item.id}/edit`} className="btn btn-danger"> Editer</Link>
+                <Link to={`/interventions/${item.id}`} className="btn btn-success"> Editer</Link>
               </td>
               <td>
                 <button type="button" onClick={(e)=>deleteIntervention(e, item.id)} className="btn btn-danger">Supprimer</button>

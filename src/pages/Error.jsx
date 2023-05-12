@@ -6,7 +6,7 @@ const Error = () => {
   return (
     <div>
       <h2>Error 404</h2>
-    <Link to='/home'></Link>
+    <Link to='/'> Retour à la page de connexion</Link>
     </div>
   )
 }

@@ -21,46 +21,48 @@ const CreateInterventions = () => {
             extincteur_id:'',
             technicien_id:''
         })
-const handleInput = (e) =>{
-    e.persist();
-    setIntervention({...intervention, [e.target.date_intervention]: e.target.value})
-}
-        const history = useHistory();
-        const saveIntervention = (e) => {
+    const handleInput = (e) =>{
+        e.persist();
+        setIntervention({ ...intervention, [e.target.name]: e.target.value });
 
-            e.preventDefault();
+        // setIntervention({...intervention, [e.target.date_intervention]: e.target.value})
+    }
+    const history = useHistory();
+    const saveIntervention = (e) => {
 
-            setLoading(true);
+        e.preventDefault();
 
-                const data={
-                    date_intervention: intervention.date_intervention,
-                    date_proch_intervention: intervention.date_proch_intervention,
-                    notes_intervention:intervention.notes_intervention,
-                    extincteur_id:intervention.extincteur_id,
-                    technicien_id:intervention.technicien_id,
-                }
-             axios.post(`api/interventions`,data).then()
-             .then(res => {
+        setLoading(true);
 
-                alert(res.data.message);
-                history.push('/interventions')
-                setLoading(false)
-
-             })
-             .catch(function(error){
-                if(error.response){
-
-                    if(error.response.status === 442){
-                        setInputErrorList(error.response.data.errors)
-                        setLoading(false)
-                    }
-                    if(error.response.status === 500){
-                        alert(error.response.data)
-                        setLoading(false)
-                    }
-                }
-             });           
+        const data={
+            date_intervention: intervention.date_intervention,
+            date_proch_intervention: intervention.date_proch_intervention,
+            notes_intervention:intervention.notes_intervention,
+            extincteur_id:intervention.extincteur_id,
+            technicien_id:intervention.technicien_id,
         }
+        axios.post(`api/interventions`,data).then()
+        .then(res => {
+
+           alert(res.data.message);
+           history.push('/interventions')
+           setLoading(false)
+
+        })
+        .catch(function(error){
+           if(error.response){
+
+               if(error.response.status === 442){
+                   setInputErrorList(error.response.data.errors)
+                   setLoading(false)
+               }
+               if(error.response.status === 500){
+                   alert(error.response.data)
+                   setLoading(false)
+               }
+           }
+        }); 
+    }
 
         if (loading){
             return(
@@ -83,27 +85,27 @@ const handleInput = (e) =>{
                             <form onSubmit={saveIntervention}>
                                 <div className="mb-3">
                                     <label>Date de l'intervention</label>
-                                    <input type="date" name="name" value={intervention.date_intervention} onChange={handleInput} className="form-control"></input>
+                                    <input type="date" name="date_intervention" value={intervention.date_intervention} onChange={handleInput} className="form-control"></input>
                                     <span className="text-danger">{inputErrorList.date_intervention}</span>
                                 </div>
                                 <div className="mb-3">
                                     <label>Prochaine Intervention</label>
-                                    <input type="date" name="prochaine intervention" value={intervention.date_proch_intervention} onChange={handleInput} className="form-control"></input>
+                                    <input type="date" name="date_proch_intervention" value={intervention.date_proch_intervention} onChange={handleInput} className="form-control"></input>
                                     <span className="text-danger">{inputErrorList.date_proch_intervention}</span>
                                 </div>
                                 <div className="mb-3">
                                     <label>Notes</label>
-                                    <input type="text" name="notes" value={intervention.notes_intervention} onChange={handleInput} className="form-control"></input>
+                                    <input type="text" name="notes_intervention" value={intervention.notes_intervention} onChange={handleInput} className="form-control"></input>
                                     <span className="text-danger">{inputErrorList.notes_intervention}</span>
                                 </div>
                                 <div className="mb-3">
-                                    <label>Exticteur</label>
-                                    <input type="number" name="extincteur" value={intervention.extincteur_id} onChange={handleInput} className="form-control"></input>
+                                    <label>Extincteur</label>
+                                    <input type="number" name="extincteur_id" value={intervention.extincteur_id} onChange={handleInput} className="form-control"></input>
                                     <span className="text-danger">{inputErrorList.extincteur_id}</span>
                                 </div>
                                 <div className="mb-3">
                                     <label>Technicien</label>
-                                    <input type="number" name="technicien" value={intervention.technicien_id} onChange={handleInput}className="form-control"></input>
+                                    <input type="number" name="technicien_id" value={intervention.technicien_id} onChange={handleInput}className="form-control"></input>
                                     <span className="text-danger">{inputErrorList.technicien_id}</span>
                                 </div>
                                 <div className="mb-3">
