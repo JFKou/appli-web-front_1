@@ -30,23 +30,22 @@ const Interventions=()=>{
         e.preventDefault();
 
         const thisClicked = e.currentTarget;
-        thisClicked.innerText = "Deleting ...";
+        thisClicked.innerText = "Suppression ...";
 
-        axios.delete(`api/interventions/${id}/delete`)
+        axios.delete(`api/interventions/${id}`)
         .then(res => {
 
             alert(res.data.message)
-            thisClicked.closest("tr").remove();
+            thisClicked.closest("Intervention supprimées avec succès").remove();
 
           })
          .catch(function(error){
 
             if(error.response){
-    
 
                 if(error.response.status === 404){
                     alert(error.response.data.message)
-                    thisClicked.innerText = "Delete";
+                    thisClicked.innerText = "Supprimer";
                   }
                 if(error.response.status === 500){
                     alert(error.response.data)

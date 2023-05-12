@@ -1,9 +1,9 @@
 import { Link, useParams } from "react-router-dom"
-import 'bootstrap/dist/css/bootstrap.min.css'
 import React, { useState,useEffect } from "react"
 import axios from "axios"
 import '../../components/loading/Loading'
 import Loading from "../../components/loading/Loading"
+import './editinterventions.css'
 
 
 const EditInterventions = () => {
@@ -44,7 +44,6 @@ const EditInterventions = () => {
         e.persist();
         setIntervention({...intervention, [e.target.name]: e.target.value});
 
-        // setIntervention({...intervention, [e.target.date_intervention]: e.target.value});
     }
 
     const updateIntervention=(e)=>{
@@ -102,7 +101,7 @@ const EditInterventions = () => {
      }
 
   return (
-    <div>
+   
            <div className="conatiner mt-5">
             <div className="row">
                 <div className="col-md-12">
@@ -150,7 +149,7 @@ const EditInterventions = () => {
                 </div>
             </div>
         </div>
-    </div>
+
   )
 }
 

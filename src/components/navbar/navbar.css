@@ -1,38 +1,11 @@
 /* @import url('https://fonts.googleapis.com/css2?family=Sora&display=swap');
 
-* {
-  font-family: 'Sora', sans-serif;
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-} */
-
-/* @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,600;1,300&display=swap'); */
-
-
-/* *{
-    padding: 0;
-    margin:0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif; 
-    text-decoration: none;
-    list-style: none;
- 
-   
-    
-} */
-
-/* :root{
-    --bg-color:#222327;
-    --text-color:#fff;
-    --main-color:blue;
-} */
-
 /* body{
     min-height: 100vh;
     color: var(--text-color);
 } */
-.header{
+
+.header-navbar{
     position: fixed;
     width: 100%;
     top: 0;
@@ -48,18 +21,18 @@
 
 }
 
-.logo{
+.logo-header{
     display: flex;
     align-items: center;
 }
 
-.logo i{
+.logo-header .i{
     color: blue;
     font-size: 25px;
     margin-right: 3px;
 }
 
-.logo span{
+.logo-header span{
     color: #fff;
     font-size: 1.1rem;
     font-weight: 600;
@@ -125,7 +98,7 @@
 
 
 @media(max-width:1280px) {
-    .header{
+    .header-navbar{
         padding: 14px;
         transition: .2s;
     }

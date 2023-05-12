@@ -1,6 +1,6 @@
 
 
-.container1{
+.container-home{
   width: 100%;
   height: 100vh;
   background: #0a1427;
@@ -13,13 +13,13 @@
 }
 
 
-.row1{
+.row-home{
   display: flex;
   height: 88%;
   align-items: center;
 }
 
-.col1{
+.col-home{
   flex-basis: 50%;
 }
 
@@ -33,7 +33,7 @@ p{
   line-height: 15px;
 }
 
-button{
+.button-home{
   width: 180px;
   color: #000;
   font-size:12px;
@@ -60,26 +60,26 @@ button{
 }
 .card1{
   border-radius: 1rem;
-  background-color: aqua;
+  background-color: #0d6efd;
   background-image: url(../../assets/images/fig1.png);
 }
 
 .card2{
   border-radius: 1rem;
-  background-color: aqua;
+  /* background-color: #0d6efd; */
   background-image: url(../../assets/images/fig3.png);
 }
 
 .card3{
   border-radius: 1rem;
-  background-color: aqua;
+  /* background-color: #0d6efd; */
   background-image: url(../../assets/images/fig4.png);
 }
 
 .card4{
   border-radius: 1rem;
-  background-color: aqua;
-  background-image: url(../../assets/images/fig5.png);
+  background-color: #0d6efd;
+  background-image: url(../../assets/images/fig2.png);
 }
 
 .card-1:hover{

@@ -12,12 +12,12 @@
     background: #102626;
 } */
 
-h3{
+.h3-loading{
     display: flex;
     justify-content: center;
 }
 
-.container{
+.container-loading{
     position: relative;
     width: 100%;
     display: flex;
@@ -25,7 +25,7 @@ h3{
     align-items: center;
     -webkit-box-reflect: below 1px linear-gradient(#0001,#0004);
 }
-.container .loader{
+.container-loading .loader{
     position: relative;
     width: 200px;
     height: 200px;
@@ -48,7 +48,7 @@ h3{
 
 }
 
-.container .loader::before
+.container-loading .loader::before
 {
     content: '';
     position: absolute;
@@ -64,7 +64,7 @@ h3{
 
 }
 
-.container .loader::after
+.container-loading .loader::after
 {
 
     content:'';
@@ -90,7 +90,7 @@ h3{
 
 }
 
-.container .loader span
+.container-loading .loader span
 {
     position: absolute;
     top: 20px;
