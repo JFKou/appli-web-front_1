@@ -16,6 +16,7 @@ import Layout from '../layout/Layout';
 
 import axios from 'axios';
 import Home from '../../pages/home/Home';
+import Calendars from '../calendar/Calendars';
 
 
  axios.defaults.baseURL = "http://localhost:8000";
@@ -45,6 +46,8 @@ const Routes = () => {
         <Route path='/about' exact component={About}/>
      
         <Route path='/client' exact component={ClientDashboard}/>
+        <Route path='/calendar' exact component={Calendars}/>
+
 
         <Route path='/signup' exact component={SignUp}>
         {/* {localStorage.getItem('auth_token') ? <Redirect to='/' /> : <SignUp />} */}

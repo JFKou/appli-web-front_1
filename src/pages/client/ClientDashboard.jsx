@@ -12,27 +12,27 @@ const ClientDashboard = () => {
   useEffect(() => {
     $(document).ready(function() {
       $(".span1").click(function() {
-        $(".dropdown").slideToggle(500);
+        $(".dropdown-client").slideToggle(500);
       });
 
       $('.sidenav-client li').click(function() {
-        $('.sidenav-client li').removeClass("active");
-        $(this).addClass("active");
+        $('.sidenav-client li').removeClass("active-client");
+        $(this).addClass("active-client");
       });
 
       $(".menu-icon-client").click(function(e) {
         e.preventDefault();
         $(".menu-icon-client").toggleClass("menuicon");
         $(".main").toggleClass("main-width");
-        $(".sidebar").toggleClass("active1");
+        $(".sidebar-client").toggleClass("active1");
         $(".sidenav-client li a").toggleClass("anchor");
         $(".sidenav-client li").toggleClass("lislide");
         $(".sidenav-client p").toggleClass("apphide");
-        $(".logo span").toggleClass("headspan");
-        $(".logo").toggleClass("lm");
+        $(".logo-client span").toggleClass("headspan");
+        $(".logo-client").toggleClass("lm");
       });
 
-      $(".user").click(function() {
+      $(".user-client").click(function() {
         $(".profile-div").toggle(1000);
       });
 
@@ -45,7 +45,7 @@ const ClientDashboard = () => {
 
   return (
     <div className="client-body">
-      <div className="app">
+      <div className="app-client">
         <Sidebar />
         <Main />
       </div>

@@ -5,7 +5,7 @@ import TableBox from './TableBox';
 
 const Main = () => {
   return (
-    <div className="main">
+    <div className="main-client">
       <TopBar />
       <CongratsBox />
       <SalesBox />

@@ -21,8 +21,12 @@ import '../../assets/boxicons-2.0.7/css/boxicons.min.css'
 import Drashboard from '../../pages/Drashboard'
 import Customers from '../../pages/Customers'
 import Interventions from '../../pages/interventions/Interventions'
-import CreateInterventions from '../../pages/interventions/CreateInterventions'
-import EditInterventions from '../../pages/interventions/EditInterventions'
+import CreateInterventions from '../../pages/interventions/createinterventions/CreateInterventions'
+import EditInterventions from '../../pages/interventions/editinterventions/EditInterventions'
+import Map from '../map/Map'
+import CreateSites from '../../pages/sites/CreateSites'
+import Extincteurs from '../../pages/extincteurs/Extincteurs'
+import Techniciens from '../../pages/techniciens/Techniciens'
 
 
 const Layout = () => {
@@ -57,6 +61,11 @@ const Layout = () => {
             <Route path='/interventions' exact component={Interventions}/> 
             <Route path='/interventions/add' exact component={CreateInterventions}/>
             <Route path='/interventions/:id' exact component={EditInterventions}/>
+            <Route path='/sites' exact component={Map}/>
+            <Route path='/sites-add' exact component={CreateSites}/>
+            <Route path='/extincteurs' exact component={Extincteurs}/> 
+            <Route path='/techniciens' exact component={Techniciens}/> 
+
             </div>
           </div>
         </div>

@@ -2,41 +2,39 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
-import 'bootstrap/dist/css/bootstrap.min.css'
-
-
-// import './interventions.css'
+// import './techniciens.css'
 import Loading from "../../components/loading/Loading"
 
 
 
 
-const Interventions=()=>{
+const Techniciens=()=>{
 
     const [loading, setLoading] = useState(true);
 
-    const [interventions, setInterventions] = useState([]);
+    const [techniciens, setTechniciens] = useState([]);
      
+    
 
     useEffect(() => {
-        axios.get(`api/interventions`).then(res => {
+        axios.get(`api/techniciens`).then(res => {
             console.log(res)
-            setInterventions(res.data);
+            setTechniciens(res.data);
             setLoading(false);
           });
       }, []); // <== ici, le tableau de dépendances est vide, donc l'effet ne s'exécute qu'une seule fois   
       
-      const deleteIntervention=(e,id)=>{
+      const deleteTechnicien=(e,id)=>{
         e.preventDefault();
 
         const thisClicked = e.currentTarget;
         thisClicked.innerText = "Suppression ...";
 
-        axios.delete(`api/interventions/${id}`)
+        axios.delete(`api/techniciens/${id}`)
         .then(res => {
 
             alert(res.data.message)
-            thisClicked.closest("Intervention supprimées avec succès").remove();
+            thisClicked.closest("Technicien supprimées avec succès").remove();
 
           })
          .catch(function(error){
@@ -62,22 +60,22 @@ const Interventions=()=>{
                 </div>
             )
       }
-      var interventionDetails = "";
-      if (interventions && interventions.length) {
-        interventionDetails = interventions.map((item, index) => {
+      var technicienDetails = "";
+      if (techniciens && techniciens.length) {
+        technicienDetails = techniciens.map((item, index) => {
           return (
             <tr key={index}>
               <td>{item.id}</td>
-              <td>{item.date_intervention}</td>
-              <td>{item.date_proch_intervention}</td>
-              <td>{item.notes_intervention}</td>
-              <td>{item.extincteur_id}</td>
-              <td>{item.technicien_id}</td>
+              <td>{item.nom_technicien}</td>
+              <td>{item.prenom_technicien}</td>
+              <td>{item.email_technicien}</td>
+              <td>{item.adresse_technicien}</td>
+              <td>{item.telephone_technicien}</td>
               <td>
-                <Link to={`/interventions/${item.id}`} className="btn btn-success"> Editer</Link>
+                <Link to={`/techniciens/${item.id}`} className="btn btn-success"> Editer</Link>
               </td>
               <td>
-                <button type="button" onClick={(e)=>deleteIntervention(e, item.id)} className="btn btn-danger">Supprimer</button>
+                <button type="button" onClick={(e)=>deleteTechnicien(e, item.id)} className="btn btn-danger">Supprimer</button>
               </td>
             </tr>
           )
@@ -89,8 +87,8 @@ const Interventions=()=>{
                 <div className="col-md-12">
                     <div className="card">
                         <div className="card-header">
-                            <h4>Listes des interventions
-                                <Link to='/interventions/add' className="btn btn-primary float-end">Ajouter une Intervention</Link>
+                            <h4>Listes des techniciens
+                                <Link to='/techniciens/add' className="btn btn-primary float-end">Ajouter une Technicien</Link>
                             </h4>
                         </div>
                         <div className="card-body">
@@ -98,17 +96,17 @@ const Interventions=()=>{
                                 <thead>
                                     <tr>
                                         <th>ID</th>
-                                        <th>Date de l'intervention</th>
-                                        <th>Prochaine Intervention</th>
-                                        <th>Notes de l'intervention</th>
-                                        <th>Extincteur </th>
-                                        <th>Technicien</th>
+                                        <th>Nom </th>
+                                        <th>Prenom</th>
+                                        <th>Email</th>
+                                        <th>Adresse</th>
+                                        <th>Telephone</th>
                                         <th>Editer</th>
                                         <th>Supprimer</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    {interventionDetails}
+                                    {technicienDetails}
                                 </tbody>
                             </table>
                         </div>
@@ -119,4 +117,4 @@ const Interventions=()=>{
     )
 }
 
-export default Interventions;
+export default Techniciens;

@@ -44,7 +44,7 @@ function Login() {
 
         if (res.data.role === 'admin') {
           history.push('/admin');
-        } else if (res.data.role === 'user') {
+        } else if (res.data.role === 'client') {
           history.push('/client');
         } else {
           history.push('/error');

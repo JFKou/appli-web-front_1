@@ -11,7 +11,7 @@
   },
   {
     "display_name": "Extincteurs",
-    "route": "/products",
+    "route": "/extincteurs",
     "icon": "bx bx-spray-can"
   },
   {
@@ -21,12 +21,12 @@
   },
   {
     "display_name": "Techniciens",
-    "route": "/analytics",
+    "route": "/techniciens",
     "icon": "bx bxs-user-badge"
   },
   {
     "display_name": "Sites",
-    "route": "/categories",
+    "route": "/sites",
     "icon": "bx bx-map-pin"
   },
   {

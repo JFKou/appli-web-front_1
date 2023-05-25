@@ -1,9 +1,7 @@
 import { Link,useHistory } from "react-router-dom"
 import React, { useState } from "react"
 import axios from "axios"
-
-import '../../components/loading/Loading'
-import Loading from "../../components/loading/Loading"
+import Loading from "../../../components/loading/Loading"
 
 
 const CreateInterventions = () => {

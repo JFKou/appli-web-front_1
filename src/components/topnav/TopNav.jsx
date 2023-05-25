@@ -43,8 +43,6 @@ const renderUserMenu = (item, index) =>(
             <i className={item.icon}></i>
             <span>{item.content}</span>
         </div>
-
-
     </Link>
 )
 

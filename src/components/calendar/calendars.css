@@ -1,0 +1,46 @@
+.intervention-marker {
+    width: 8px;
+    height: 8px;
+    background-color: #FCD34D;
+    border-radius: 50%;
+  }
+  
+  .intervention-month {
+    font-size: 12px;
+    color: #FCD34D;
+    text-align: center;
+  }
+  
+  .intervention-date {
+    position: relative;
+    width: 28px;
+    height: 28px;
+    background-color: #FCD34D;
+    border-radius: 50%;
+    color: #fff;
+    text-align: center;
+    line-height: 28px;
+    cursor: pointer;
+  }
+  
+  .intervention-details {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #fff;
+    padding: 6px;
+    font-size: 12px;
+    border-radius: 4px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    white-space: nowrap;
+  }
+
+  .main-calandar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   height: 100vh;
+   width: 100%;
+  }
+  

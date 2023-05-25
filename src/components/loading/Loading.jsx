@@ -9,7 +9,7 @@ function Loading () {
         
           <div className="loader" role='status'><span> </span></div> 
       </div>
-      <h3 className='h3-loading'>Loading... Veuillez patienter</h3>
+      <h3 className='h3-loading'>Chargement... Veuillez patienter</h3>
     </div>
   )
 }
