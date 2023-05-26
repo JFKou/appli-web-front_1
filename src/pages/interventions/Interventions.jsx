@@ -7,9 +7,8 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 
 // import './interventions.css'
 import Loading from "../../components/loading/Loading"
-
-
-
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faAdd, faDeleteLeft, faEdit } from "@fortawesome/free-solid-svg-icons";
 
 const Interventions=()=>{
 
@@ -74,10 +73,10 @@ const Interventions=()=>{
               <td>{item.extincteur_id}</td>
               <td>{item.technicien_id}</td>
               <td>
-                <Link to={`/interventions/${item.id}`} className="btn btn-success"> Editer</Link>
+                <Link to={`/interventions/${item.id}`} className="btn btn-success"> <FontAwesomeIcon icon={faEdit}/></Link>
               </td>
               <td>
-                <button type="button" onClick={(e)=>deleteIntervention(e, item.id)} className="btn btn-danger">Supprimer</button>
+                <button type="button" onClick={(e)=>deleteIntervention(e, item.id)} className="btn btn-danger"><FontAwesomeIcon icon={faDeleteLeft}/></button>
               </td>
             </tr>
           )
@@ -90,7 +89,7 @@ const Interventions=()=>{
                     <div className="card">
                         <div className="card-header">
                             <h4>Listes des interventions
-                                <Link to='/interventions/add' className="btn btn-primary float-end">Ajouter une Intervention</Link>
+                                <Link to='/interventions/add' className="btn btn-primary float-end"><FontAwesomeIcon icon={faAdd}/></Link>
                             </h4>
                         </div>
                         <div className="card-body">

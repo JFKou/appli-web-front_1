@@ -3,38 +3,38 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 import Loading from "../../components/loading/Loading"
-
+import { faAdd, faDeleteLeft, faFileEdit } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faAdd, faDeleteLeft, faUserEdit } from "@fortawesome/free-solid-svg-icons";
 
 
-const Techniciens=()=>{
+
+const Contrats=()=>{
 
     const [loading, setLoading] = useState(true);
 
-    const [techniciens, setTechniciens] = useState([]);
+    const [contrats, setContrats] = useState([]);
      
     
 
     useEffect(() => {
-        axios.get(`api/techniciens`).then(res => {
+        axios.get(`api/contrats`).then(res => {
             console.log(res)
-            setTechniciens(res.data);
+            setContrats(res.data);
             setLoading(false);
           });
       }, []); // <== ici, le tableau de dépendances est vide, donc l'effet ne s'exécute qu'une seule fois   
       
-      const deleteTechnicien=(e,id)=>{
+      const deleteContrat=(e,id)=>{
         e.preventDefault();
 
         const thisClicked = e.currentTarget;
         thisClicked.innerText = "Suppression ...";
 
-        axios.delete(`api/techniciens/${id}`)
+        axios.delete(`api/contrats/${id}`)
         .then(res => {
 
             alert(res.data.message)
-            thisClicked.closest("Technicien supprimés avec succès").remove();
+            thisClicked.closest("Contrat supprimés avec succès").remove();
 
           })
          .catch(function(error){
@@ -60,22 +60,20 @@ const Techniciens=()=>{
                 </div>
             )
       }
-      var technicienDetails = "";
-      if (techniciens && techniciens.length) {
-        technicienDetails = techniciens.map((item, index) => {
+      var contratDetails = "";
+      if (contrats && contrats.length) {
+        contratDetails = contrats.map((item, index) => {
           return (
             <tr key={index}>
               <td>{item.id}</td>
-              <td>{item.nom_technicien}</td>
-              <td>{item.prenom_technicien}</td>
-              <td>{item.email_technicien}</td>
-              <td>{item.adresse_technicien}</td>
-              <td>{item.telephone_technicien}</td>
+              <td>{item.date_debut}</td>
+              <td>{item.date_fin}</td>
+              <td>{item.clause}</td>
               <td>
-                <Link to={`/techniciens/${item.id}`} className="btn btn-success"><FontAwesomeIcon icon={faUserEdit}/></Link>
+                <Link to={`/contrats/${item.id}`} className="btn btn-success"><FontAwesomeIcon icon={faFileEdit}/></Link>
               </td>
               <td>
-                <button type="button" onClick={(e)=>deleteTechnicien(e, item.id)} className="btn btn-danger"><FontAwesomeIcon icon={faDeleteLeft}/></button>
+                <button type="button" onClick={(e)=>deleteContrat(e, item.id)} className="btn btn-danger"><FontAwesomeIcon icon={faDeleteLeft}/></button>
               </td>
             </tr>
           )
@@ -87,8 +85,8 @@ const Techniciens=()=>{
                 <div className="col-md-12">
                     <div className="card">
                         <div className="card-header">
-                            <h4>Listes des techniciens
-                                <Link to='/techniciens/add' className="btn btn-primary float-end"><FontAwesomeIcon icon={faAdd}/></Link>
+                            <h4>Listes des contrats
+                                <Link to='/contrats/add' className="btn btn-primary float-end"><FontAwesomeIcon icon={faAdd}/></Link>
                             </h4>
                         </div>
                         <div className="card-body">
@@ -96,17 +94,15 @@ const Techniciens=()=>{
                                 <thead>
                                     <tr>
                                         <th>ID</th>
-                                        <th>Nom </th>
-                                        <th>Prenom</th>
-                                        <th>Email</th>
-                                        <th>Adresse</th>
-                                        <th>Telephone</th>
+                                        <th>Date du debut</th>
+                                        <th>Date de fin</th>
+                                        <th>clauses</th>
                                         <th>Editer</th>
                                         <th>Supprimer</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    {technicienDetails}
+                                    {contratDetails}
                                 </tbody>
                             </table>
                         </div>
@@ -117,4 +113,4 @@ const Techniciens=()=>{
     )
 }
 
-export default Techniciens;
+export default Contrats;

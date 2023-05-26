@@ -2,10 +2,9 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
-// import './extincteurs.css'
 import Loading from "../../components/loading/Loading"
-
-
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faDeleteLeft, faEdit } from "@fortawesome/free-solid-svg-icons";
 
 
 const Extincteurs=()=>{
@@ -13,8 +12,6 @@ const Extincteurs=()=>{
     const [loading, setLoading] = useState(true);
 
     const [extincteurs, setExtincteurs] = useState([]);
-     
-    
 
     useEffect(() => {
         axios.get(`api/extincteurs`).then(res => {
@@ -38,7 +35,6 @@ const Extincteurs=()=>{
 
           })
          .catch(function(error){
-
             if(error.response){
 
                 if(error.response.status === 404){
@@ -72,10 +68,10 @@ const Extincteurs=()=>{
               <td>{item.categorie_id}</td>
               <td>{item.site_id}</td>
               <td>
-                <Link to={`/extincteurs/${item.id}`} className="btn btn-success"> Editer</Link>
+                <Link to={`/extincteurs/${item.id}`} className="btn btn-success"> <FontAwesomeIcon icon={faEdit}/></Link>
               </td>
               <td>
-                <button type="button" onClick={(e)=>deleteExtincteur(e, item.id)} className="btn btn-danger">Supprimer</button>
+                <button type="button" onClick={(e)=>deleteExtincteur(e, item.id)} className="btn btn-danger"><FontAwesomeIcon icon={faDeleteLeft}/></button>
               </td>
             </tr>
           )
@@ -88,7 +84,7 @@ const Extincteurs=()=>{
                     <div className="card">
                         <div className="card-header">
                             <h4>Listes des extincteurs
-                                <Link to='/extincteurs/add' className="btn btn-primary float-end">Ajouter une Extincteur</Link>
+                                <Link to='/extincteurs/add' className="btn btn-primary float-end">Ajouter un Extincteur</Link>
                             </h4>
                         </div>
                         <div className="card-body">
