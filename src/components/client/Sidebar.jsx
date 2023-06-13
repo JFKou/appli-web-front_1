@@ -23,9 +23,7 @@ const Sidebar = () => {
     </div>
     <li><FontAwesomeIcon icon={faFile} className='fa i-client' /><Link className='a-client' to="#"> Layout</Link></li>
     <p className="app-client p-client">App Ans Pages</p><li><FontAwesomeIcon icon={faCalendar} className='i-client'/>
-    <Link className='a-client' to="/calendar"> Calendar</Link></li><li><FontAwesomeIcon icon={faClone} className='i-client'/>
-    <Link className='a-client' to="#"> Invoice</Link>
-    </li>
+    <Link className='a-client' to="/calendar"> Calendar</Link></li>
     <li><FontAwesomeIcon icon={faUser} className='fa i-client'/>
     <Link className='a-client' to="#"> User</Link></li>
     <li><FontAwesomeIcon icon={faShield} className='fa i-client'/>
@@ -33,10 +31,7 @@ const Sidebar = () => {
     <li><FontAwesomeIcon icon={faFileText} className='fa i-client'/>
     <Link className='a-client' to="#"> Pages</Link></li>
     <li><FontAwesomeIcon icon={faLock} className='fa i-client'/>
-    <Link className='a-client' to="#"> Authentications</Link></li>
-    <li> {/*<i className="fa fa-square-o" />*/}
-    <FontAwesomeIcon icon={faSquareOdnoklassniki} className='fa i-client'/> 
-    <Link className='a-client' to="#"> Modal Examples</Link></li>
+    <Link className='a-client' to="#"> Se deconnecter</Link></li>
   </div>
 </div>   
   )

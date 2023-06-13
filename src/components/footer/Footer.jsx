@@ -54,7 +54,7 @@ const Footer = () => {
         </div>
         </div>
         <div className="copyrightText">
-        <p>Copyright@2023 Esatic,Treichville. Tous droits reservés.</p>
+        <p>Copyright@2023 Activilink,Treichville. Tous droits reservés.</p>
         </div>
         </div>
         );

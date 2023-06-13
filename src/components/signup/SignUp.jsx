@@ -12,7 +12,7 @@ import { faLock } from "@fortawesome/free-solid-svg-icons";
 
 function SignUp() {
 
-  const Navigate = useHistory();
+  const history = useHistory();
 
   const [registerInput, setRegister] = useState({
     name: '',
@@ -42,7 +42,7 @@ function SignUp() {
         localStorage.setItem('auth_token', res.data.token);
         localStorage.setItem('auth_name', res.data.username);
         swal("Success",res.data.message,"success");
-        Navigate('/dashboard');
+        history.push('/waitpage');
         }
         else
         {

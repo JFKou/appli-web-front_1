@@ -17,6 +17,7 @@ import Layout from '../layout/Layout';
 import axios from 'axios';
 import Home from '../../pages/home/Home';
 import Calendars from '../calendar/Calendars';
+import WaitPage from '../../pages/WaitPage';
 
 
  axios.defaults.baseURL = "http://localhost:8000";
@@ -56,6 +57,8 @@ const Routes = () => {
         <Route path='/admin' exact>
           <Layout/> 
         </Route>
+
+        <Route path='/wait' exact component={WaitPage}/>
 
 
         <Route path='/about' exact component={About}/>
