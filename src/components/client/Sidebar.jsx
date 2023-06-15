@@ -1,10 +1,18 @@
-import { faSquareOdnoklassniki } from '@fortawesome/free-brands-svg-icons'
-import { faAngleRight, faCalendar, faChevronLeft, faClone, faFile, faFileText, faHome, faLock, faShield, faUser } from '@fortawesome/free-solid-svg-icons'
+// import { faSquareOdnoklassniki } from '@fortawesome/free-brands-svg-icons'
+import { faAngleRight, faCalendar, faChevronLeft, faFile, faFileText, faHome, faLock, faShield, faUser } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useHistory } from 'react-router-dom'
 
 const Sidebar = () => {
+  
+  const history=useHistory();
+
+  function logOut(){
+  localStorage.clear('auth_token');
+  history.push('/login');
+  }
+
   return (
    <div className="sidebar-client">
   <h1 className="logo-client">Activi<span>.Link</span></h1>
@@ -31,7 +39,18 @@ const Sidebar = () => {
     <li><FontAwesomeIcon icon={faFileText} className='fa i-client'/>
     <Link className='a-client' to="#"> Pages</Link></li>
     <li><FontAwesomeIcon icon={faLock} className='fa i-client'/>
-    <Link className='a-client' to="#"> Se deconnecter</Link></li>
+    <Link className='a-client' to="#"
+     onClick={logOut}
+    > Se deconnecter</Link></li>
+    <li>
+    <Link className='a-client' to="#"
+    ></Link>
+    </li>
+    <li>
+    <Link className='a-client' to="#"
+    ></Link>
+    </li>
+    
   </div>
 </div>   
   )

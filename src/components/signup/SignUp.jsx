@@ -42,7 +42,7 @@ function SignUp() {
         localStorage.setItem('auth_token', res.data.token);
         localStorage.setItem('auth_name', res.data.username);
         swal("Success",res.data.message,"success");
-        history.push('/waitpage');
+        history.push('/wait');
         }
         else
         {

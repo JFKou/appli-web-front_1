@@ -1,0 +1,82 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "poppins";
+}
+
+.row {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+.col-sm-12 {
+  width: 100%;
+}
+
+.col-sm-10 {
+  width: 83.33333333%;
+}
+
+.col-sm-offset-1 {
+  margin-left: 8.33333333%;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.wait-p
+{
+    color: black;
+}
+
+.page_404
+{
+    padding: 40px 0;
+    background: #fff;
+    font-family: 'Poppins';
+}
+
+.page_404 img
+{
+    width: 100%;
+}
+
+.four_zero_four_bg
+{
+    background: url('../assets/images/error-404.gif');
+    height: 400px;
+    background-position: center;
+}
+
+h1
+{
+    font-size: 80px;
+}
+
+.error-h3
+{
+  padding-bottom: 16px;
+
+    font-size: 30px;
+}
+
+.wait-a
+{
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    background: #081fa3;
+    display: inline-block;
+}
+
+.content_box_404
+{
+    margin-top: -50px;
+}
+.wait-a:hover
+{
+    text-decoration: none;
+    color: #fff;
+}

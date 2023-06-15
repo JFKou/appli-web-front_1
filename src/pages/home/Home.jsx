@@ -7,6 +7,7 @@ import Navbar  from '../../components/navbar/Navbar'
 import AuthForm from "../../components/auth/AuthForm"
 
 import './home.css'
+
 const Home = () => {
   return (
     <div>

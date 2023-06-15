@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react'
+import { useHistory } from "react-router-dom";
 
 import './layout.css'
 
@@ -43,6 +44,13 @@ import CreateContrats from '../../pages/contrats/CreateContrats'
 
 
 const Layout = () => {
+
+  const history=useHistory();
+  useEffect(()=>{
+    if(!localStorage.getItem('auth_token')){
+      history.push('./login')
+    }
+  },[])
 
   const themeReducer=useSelector(state => state.ThemeReducer)
 

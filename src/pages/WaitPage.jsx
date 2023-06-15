@@ -6,6 +6,7 @@ import man from '../assets/images/man.png'
 import facebook from '../assets/images/facebook.png'
 import instagram from '../assets/images/instagram.png'
 import twitter from '../assets/images/twitter.png'
+import { Link } from 'react-router-dom';
 
 
 
@@ -79,7 +80,7 @@ const App = () => {
         <a href="#" className="wait-logo">Activilink</a>
         <nav>
           <ul>
-            <li> <a href="#">Home</a></li>
+            <li> <Link to='/'>Home</Link></li>
           </ul>
         </nav>
       </div>
@@ -101,7 +102,7 @@ const App = () => {
         </ul>
       </div>
       <div className="newsletter">
-        <h2>Stay Tuned</h2>
+        <h2>Restez à l'écoute</h2>
         <p>Soyez notifié au lancement</p>
         <div className="inputBox">
           <form action="">

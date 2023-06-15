@@ -35,11 +35,6 @@
     "icon": "bx bx-lock-alt"
   },
   {
-    "display_name": "Inventaires",
-    "route": "/inventory",
-    "icon": "bx bx-package"
-  },
-  {
     "display_name": "Parametres",
     "route": "/settings",
     "icon": "bx bx-cog"

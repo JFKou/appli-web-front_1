@@ -1,3 +1,4 @@
+import { useHistory } from "react-router-dom";
 import Main from "../../components/client/Main"
 import Sidebar from "../../components/client/Sidebar"
 import './clientdashboard.css'
@@ -9,9 +10,17 @@ import { useEffect } from "react";
 
 const ClientDashboard = () => {
 
+  // const history=useHistory();
+  // useEffect(()=>{
+  //   if(!localStorage.getItem('token')){
+  //     history.push('./login')
+  //   }
+  // }, [])
+
   useEffect(() => {
     $(document).ready(function() {
-      $(".span1").click(function() {
+      $(".span1").click(function() 
+      {
         $(".dropdown-client").slideToggle(500);
       });
 
@@ -20,7 +29,8 @@ const ClientDashboard = () => {
         $(this).addClass("active-client");
       });
 
-      $(".menu-icon-client").click(function(e) {
+      $(".menu-icon-client").click(function(e) 
+      {
         e.preventDefault();
         $(".menu-icon-client").toggleClass("menuicon");
         $(".main").toggleClass("main-width");

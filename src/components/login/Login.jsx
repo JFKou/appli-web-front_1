@@ -46,8 +46,13 @@ function Login() {
           history.push('/admin');
         } else if (res.data.role === 'client') {
           history.push('/client');
-        } else {
-          history.push('/error');
+        }
+        //  else if(res.data.role === 'user')
+        // {
+        //   history.push('/wait')
+        // }
+        else {
+          history.push('/wait');
         }
       } else if (res.data.status === 401) {
         swal("Warning", res.data.message,"warning");
