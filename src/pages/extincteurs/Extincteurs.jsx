@@ -92,9 +92,9 @@ const Extincteurs=()=>{
                                 <thead>
                                     <tr>
                                         <th>ID</th>
-                                        <th>numero de l'extincteur</th>
-                                        <th>Date de création</th>
-                                        <th>Date d'expiration</th>
+                                        <th>Numero</th>
+                                        <th>crée le</th>
+                                        <th>Expire le</th>
                                         <th>Catégorie </th>
                                         <th>Site</th>
                                         <th>Editer</th>

@@ -97,9 +97,9 @@ const Interventions=()=>{
                                 <thead>
                                     <tr>
                                         <th>ID</th>
-                                        <th>Date de l'intervention</th>
-                                        <th>Prochaine Intervention</th>
-                                        <th>Notes de l'intervention</th>
+                                        <th>Maintenance</th>
+                                        <th>Maintenance suivante</th>
+                                        <th>Notes</th>
                                         <th>Extincteur </th>
                                         <th>Technicien</th>
                                         <th>Editer</th>

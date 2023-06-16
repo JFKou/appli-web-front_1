@@ -27,7 +27,6 @@ const Topbar = () => {
       </div>
     </Link>
   </div>
-  <div className="clearfix" />
 </div>
 
 

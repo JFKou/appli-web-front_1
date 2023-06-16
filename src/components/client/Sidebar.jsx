@@ -30,25 +30,24 @@ const Sidebar = () => {
       <li><Link to="#" className='a-client'><span className="dot" /> eCommerce</Link></li>
     </div>
     <li><FontAwesomeIcon icon={faFile} className='fa i-client' /><Link className='a-client' to="#"> Layout</Link></li>
-    <p className="app-client p-client">App Ans Pages</p><li><FontAwesomeIcon icon={faCalendar} className='i-client'/>
-    <Link className='a-client' to="/calendar"> Calendar</Link></li>
+    <p className="app-client p-client">Applications & Pages</p><li><FontAwesomeIcon icon={faCalendar} className='i-client'/>
+    <Link className='a-client' to="/calendar"> Calendrier</Link></li>
     <li><FontAwesomeIcon icon={faUser} className='fa i-client'/>
-    <Link className='a-client' to="#"> User</Link></li>
+    <Link className='a-client' to="#"> Utilisateur</Link></li>
     <li><FontAwesomeIcon icon={faShield} className='fa i-client'/>
     <Link className='a-client' to="#"> Permission</Link></li>
     <li><FontAwesomeIcon icon={faFileText} className='fa i-client'/>
     <Link className='a-client' to="#"> Pages</Link></li>
     <li><FontAwesomeIcon icon={faLock} className='fa i-client'/>
-    <Link className='a-client' to="#"
-     onClick={logOut}
-    > Se deconnecter</Link></li>
+    <Link className='a-client' to="#" onClick={logOut}> Se deconnecter</Link></li>
+
+    {/* only to complete the longer of the sidebar */}
     <li>
-    <Link className='a-client' to="#"
-    ></Link>
+    <Link className='a-client' to="#"></Link>
     </li>
+
     <li>
-    <Link className='a-client' to="#"
-    ></Link>
+    <Link className='a-client' to="#"></Link>
     </li>
     
   </div>

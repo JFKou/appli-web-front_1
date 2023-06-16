@@ -1,8 +1,14 @@
-/* .intervention-marker {
+.intervention-marker {
     width: 100%;
-    height: 8px;
-    background-color: #FCD34D;
-    border-radius: 50%;
+    transform: translateY(-50%);
+    height:450%;
+    /* margin: auto; */
+    /* padding-top: auto; */
+    background: #bb7409;
+    /* border: 0; */
+    /* border-radius: 3px; */
+    font-weight: bold;
+
   }
   
   .intervention-month {
@@ -37,7 +43,7 @@
     white-space: nowrap;
   }
 
-  .main-calandar{
+  /* .main-calandar{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -46,11 +52,8 @@
     background-color:#232333;
   
    
-  }
+  } */
 
-  .react-calendar__tile {
-    width: 100%;
-    height: 100px;
-  }
+ 
   
-   */
+  
