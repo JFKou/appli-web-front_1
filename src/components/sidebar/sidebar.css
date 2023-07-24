@@ -9,14 +9,14 @@
 }
 
 .sidebar__logo{
-    height: 150px;
+    height: 100px;
     display: flex;
     align-items: center;  
-    justify-content: center;  
+    justify-content: center;
 }
 
 .sidebar__logo > img{
-    height: 45px;
+    height: 100px;
 }
 
 .sidebar__item{
@@ -24,7 +24,7 @@
 }
 .sidebar__item-inner{
     padding: 15px 25px;
-    display:flex ;
+    display:flex;
     align-items: center;
     font-weight: 600;
     transition: color .3s ease 0s;

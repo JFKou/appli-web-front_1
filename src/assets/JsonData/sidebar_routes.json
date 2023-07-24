@@ -38,5 +38,10 @@
     "display_name": "Parametres",
     "route": "/settings",
     "icon": "bx bx-cog"
+  },
+  {
+    "display_name": "Deconnexion",
+    "route": "/disconnect",
+    "icon": "bx bx-log-out-circle"
   }
 ]

@@ -7,8 +7,8 @@ const Main = () => {
   return (
     <div className="main-client">
       <TopBar />
-      <CongratsBox />
-      <SalesBox />
+      {/* <CongratsBox /> */}
+      {/* <SalesBox /> */}
       <TableBox />
     </div>
   );
