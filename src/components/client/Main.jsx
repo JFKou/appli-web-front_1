@@ -1,6 +1,6 @@
 import TopBar from './TopBar';
-import CongratsBox from './CongratsBox';
-import SalesBox from './SalesBox';
+// import CongratsBox from './CongratsBox';
+// import SalesBox from './SalesBox';
 import TableBox from './TableBox';
 
 const Main = () => {

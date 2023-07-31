@@ -1,5 +1,5 @@
 // import { faSquareOdnoklassniki } from '@fortawesome/free-brands-svg-icons'
-import { faAngleRight, faCalendar, faChevronLeft, faFile, faFileText, faHome, faLock, faShield, faUser } from '@fortawesome/free-solid-svg-icons'
+import { faAngleRight, faCalendar, faFile, faFileText, faHome, faLock, faShield, faUser } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React from 'react'
 import { Link, useHistory } from 'react-router-dom'
@@ -16,7 +16,7 @@ const Sidebar = () => {
   return (
    <div className="sidebar-client">
   <h1 className="logo-client">Activi<span>.Link</span></h1>
-  <FontAwesomeIcon icon={faChevronLeft} className='fa i-client menu-icon'/>
+  {/* <FontAwesomeIcon icon={faChevronLeft} className='fa i-client menu-icon'/> */}
   <div className="sidenav-client ul-client">
     <li className="active-client">
       <FontAwesomeIcon icon={faHome} className='fa i-client'/>

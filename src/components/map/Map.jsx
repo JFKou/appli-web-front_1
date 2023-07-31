@@ -71,8 +71,8 @@ const Map = () => {
           </MarkerClusterGroup>
         </MapContainer>
       </div>
-    </>
+   </>
   );
-};
+            };
 
-export default Map;
+            export default Map;

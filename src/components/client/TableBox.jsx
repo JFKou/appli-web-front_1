@@ -20,7 +20,7 @@ const TableBox = () => {
       <tbody>
         <tr>
           <td data-label="Account">#1</td>
-          <td data-label="Due Date"><img src="image/user-client.png" className="tab-img" alt='' />Manoj</td>
+          <td data-label="Due Date"><img src="image/user-client.png" className="tab-img" alt='' />Classe A</td>
           <td data-label="Period">03/01/2022</td>
           <td data-label="Due Date">03/01/2022</td>
           <td data-label="Amount" style={{position: 'relative'}}><span className="pe" />En attente</td>
@@ -30,7 +30,7 @@ const TableBox = () => {
         </tr>
         <tr className="active-tr">
           <td data-label="Account">#3412</td>
-          <td data-label="Due Date"><img src="image/user-client.png" className="tab-img" alt=''/>Manoj</td>
+          <td data-label="Due Date"><img src="image/user-client.png" className="tab-img" alt=''/>Classe ABC</td>
           <td data-label="Period">03/01/2022</td>
           <td data-label="Due Date">03/01/2022</td>
           <td data-label="Amount" style={{position: 'relative'}}><span className="de" />Entretenu</td>
@@ -40,7 +40,7 @@ const TableBox = () => {
         </tr>
         <tr>
           <td data-label="Account">#3412</td>
-          <td data-label="Due Date"><img src="image/user-client.png" className="tab-img" alt=''/>Manoj</td>
+          <td data-label="Due Date"><img src="image/user-client.png" className="tab-img" alt=''/>Classe C</td>
           <td data-label="Period">03/01/2022</td>
           <td data-label="Due Date">03/01/2022</td>
           <td data-label="Amount" style={{position: 'relative'}}><span className="pe" />En attente</td>
@@ -50,7 +50,7 @@ const TableBox = () => {
         </tr>
         <tr>
           <td data-label="Account">#3412</td>
-          <td data-label="Due Date"><img src="image/user-client.png" className="tab-img" alt=''/>Manoj</td>
+          <td data-label="Due Date"><img src="image/user-client.png" className="tab-img" alt=''/>Classe ABC</td>
           <td data-label="Period">03/01/2022</td>
           <td data-label="Due Date">03/01/2022</td>
           <td data-label="Amount" style={{position: 'relative'}}><span className="pe" />En attente</td>
@@ -60,7 +60,7 @@ const TableBox = () => {
         </tr>
         <tr>
           <td data-label="Account">#3412</td>
-          <td data-label="Due Date"><img src="image/user-client.png" className="tab-img" alt=''/>Manoj</td>
+          <td data-label="Due Date"><img src="image/user-client.png" className="tab-img" alt=''/>Classe C</td>
           <td data-label="Period">03/01/2022</td>
           <td data-label="Due Date">03/01/2022</td>
           <td data-label="Amount" style={{position: 'relative'}}><span className="de" />Dispatch</td>
@@ -68,9 +68,9 @@ const TableBox = () => {
             &nbsp; 
             <FontAwesomeIcon icon={faAngleDown} className='i-client' /></td>
         </tr>
-        <tr>
+        {/* <tr>
           <td data-label="Account">#3412</td>
-          <td data-label="Due Date"><img src={''} className="tab-img" alt=''/>Manoj</td>
+          <td data-label="Due Date"><img src={''} className="tab-img" alt=''/>Classe A</td>
           <td data-label="Period">03/01/2022</td>
           <td data-label="Due Date">03/01/2022</td>
           <td data-label="Amount" style={{position: 'relative'}}><span className="pe" />En attente</td>
@@ -78,7 +78,7 @@ const TableBox = () => {
 
             &nbsp; 
             <FontAwesomeIcon icon={faAngleDown} className='i-client' /></td>
-        </tr>
+        </tr> */}
       </tbody>
     </table>
   </div>
