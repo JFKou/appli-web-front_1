@@ -41,7 +41,7 @@ const CreateInterventions = () => {
         axios.post(`api/interventions`,data).then()
         .then(res => {
 
-           alert(res.data.message);
+        //    alert(res.data.message);
            history.push('/interventions')
            setLoading(false)
 

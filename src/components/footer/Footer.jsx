@@ -12,8 +12,7 @@ const Footer = () => {
         <div className="sec aboutus">
         <h2>A Propos</h2>
         <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat placeat voluptatibus illum at magnam voluptatum quis unde nihil odit alias veniam, voluptas rerum minima, quae quisquam nesciunt in laudantium sequi.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque exercitationem, deserunt, similique commodi perferendis laborum voluptatum quidem veniam, vel eveniet magni reiciendis ab quod minima aliquid esse facere obcaecati! Ad!
+        Bienvenue sur notre site dédié à la maintenance d'extincteurs. Nous sommes passionnés par la sécurité et la protection de vos espaces. Notre équipe expérimentée s'engage à maintenir vos équipements d'extinction en parfait état pour garantir la sécurité de vos locaux et de vos occupants. Avec des années d'expérience et un dévouement sans faille à la sécurité incendie, nous sommes là pour vous offrir la tranquillité d'esprit que vous méritez.
         </p>
         <ul className="sci">
         <li><a href="http://www.mon-site-fictif.com/produits/nouveautes"><FontAwesomeIcon icon={faFacebook} className='i' /></a></li>

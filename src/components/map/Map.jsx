@@ -25,7 +25,7 @@ const Map = () => {
   }, []);
 
   // create custom icon
-  const mapIconUrl = require("../../assets/images/map.png");
+  const mapIconUrl = require('./marker-icon.png');
   const customIcon = new Icon({
     iconUrl: mapIconUrl.default, // Utilisez mapIconUrl.default pour accéder à l'URL de l'image
     iconSize: [38, 38]

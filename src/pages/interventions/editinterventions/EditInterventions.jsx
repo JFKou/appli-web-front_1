@@ -94,7 +94,7 @@ const EditInterventions = () => {
      if(Object.keys(intervention).length ===0){
         return(
             <div className="container">
-                <h4>Intervention non trouvée</h4>
+                {/* <h4>Intervention non trouvée</h4> */}
             </div>
         )
      }

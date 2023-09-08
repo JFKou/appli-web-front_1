@@ -34,7 +34,7 @@ const Navbar = () => {
           <Link to="/services" className='a' style={{ textDecoration: 'none' }}>Services</Link>
         </li>
         <li>
-          <Link to="/contactus" className='a'style={{ textDecoration: 'none' }}>Contacts</Link>
+          <Link to="/contacts" className='a'style={{ textDecoration: 'none' }}>Contacts</Link>
         </li>   
       </ul>
       <div className="main-nav">
